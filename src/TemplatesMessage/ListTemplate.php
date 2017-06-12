@@ -30,7 +30,7 @@ class ListTemplate implements TemplateInterface
                     'type' => 'template',
                     'payload' => [
                         'template_type' => 'list',
-                        'buttons' => $this->products
+                        'elements' => $this->products
                     ]
                 ]
             ]
