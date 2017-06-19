@@ -14,4 +14,13 @@ class GetStartedButtonTest extends TestCase
 
         $this->assertTrue(is_string($result));
     }
+
+    public function testRemoveGetStartedButton()
+    {
+        $data = (new GetStartedButton())->remove();
+        $callSendApi = new CallSendApi('AQUI_VAI_SEU_PAGE_ACCESS_TOKEN');
+        $result = $callSendApi->make($data, CallSendApi::URL_PROFILE, 'DELETE');
+
+        $this->assertTrue(is_string($result));
+    }
 }
