@@ -29,7 +29,7 @@ class SenderRequest
             return null;
         }
         if (is_array($this->event['postback']) and !empty($this->event['postback']['payload'])) {
-            $this->event['postback']['payload'];
+            return $this->event['postback']['payload'];
         }
         return $this->event['postback'];
     }
